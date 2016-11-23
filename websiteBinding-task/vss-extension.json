@@ -1,0 +1,69 @@
+{
+    "manifestVersion": 1,
+    "id": "websiteBindingTask",
+    "name": "Web Site Binding",
+    "version": "0.1.26",
+    "public": true,
+    "publisher": "docscode",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Task adds or removes binding on web site on remote computer.",
+    "categories": [
+        "Build and release"
+    ],
+    "tags": [
+        "release",
+        "build",
+        "IIS",
+        "bindings",
+		"website"
+    ],
+    "links": {
+        "learn": {
+            "uri": "https://github.com/jeblankenship/TFS-TASK/websiteBinding-task#readme"
+        },
+        "support": {
+            "uri": "https://github.com/jeblankenship/TFS-TASK/issues"  
+        }
+    },
+    "icons": {
+        "default": "images/extension-icon.png"
+    },
+    "branding": {
+        "color": "#1C3272",
+        "theme": "dark"
+    },
+    "screenshots": [
+        {
+            "path": "images/screenshot-01.png"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "README.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "files": [
+        {
+            "path": "task"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "websiteBindingtask",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "task"
+            }
+        }
+    ]
+}

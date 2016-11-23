@@ -1,0 +1,33 @@
+{
+  "name": "docsCode.vsts-websiteBinding-task",
+  "version": "0.1.26",
+  "description": "Build task for VS Team Services that adds or removes binding on web site on remote computer.",
+  "author": "James Blankenship",
+  "license": "MIT",
+  "homepage": "https://github.com/jeblankenship/TFS-TASK/websiteBinding-task#readme",
+  "bugs": {
+    "url": "https://github.com/jeblankenship/TFS-TASK/issues"
+  },
+  "keywords": [
+    "VSTS",
+    "release",
+    "build",
+    "IIS",
+    "Binding",
+	"Website"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeblankenship/TFS-TASK.git"
+  },
+  "devDependencies": {
+    "del": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-util": "^3.0.0",
+    "merge-stream": "^1.0.0",
+    "shelljs": "^0.3.0",
+    "minimist": "1.1.1",
+    "semver": "4.3.3"
+  }
+}
