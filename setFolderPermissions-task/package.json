@@ -1,10 +1,10 @@
 {
-  "name": "docsCode.vsts-websiteBinding-task",
-  "version": "0.1.27",
-  "description": "Build task for VS Team Services that adds or removes binding on web site on remote computer.",
+  "name": "docsCode.vsts-setFolderPermissions-task",
+  "version": "0.1.2",
+  "description": "Build task for VS Team Services that sets permission on specified folder on remote computer.",
   "author": "James Blankenship",
   "license": "MIT",
-  "homepage": "https://github.com/jeblankenship/TFS-TASK/websiteBinding-task#readme",
+  "homepage": "https://github.com/jeblankenship/TFS-TASK/tree/master/setFolderPermissions-task#readme",
   "bugs": {
     "url": "https://github.com/jeblankenship/TFS-TASK/issues"
   },
@@ -12,9 +12,8 @@
     "VSTS",
     "release",
     "build",
-    "IIS",
-    "Binding",
-	"Website"
+	"folder",
+	"permissions"
   ],
   "repository": {
     "type": "git",

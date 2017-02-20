@@ -1,0 +1,97 @@
+{
+    "id": "c279b968-146c-4716-b00c-a176cf4be249",
+    "name": "websiteBindingTask",
+    "friendlyName": "Set Folder Permissions",
+    "description": "Task sets permission on specified folder on remote computer.",
+	"helpMarkDown": "[More Information](https://github.com/jeblankenship/TFS-TASK/tree/master/setFolderPermissions-task#readme)",
+    "category": "Utility",
+    "visibility": [
+        "Build",
+		"Release"
+    ],
+    "author": "James Blankenship",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 2
+    },
+    "minimumAgentVersion": "1.92.0",
+    "inputs": [
+        {
+            "name": "server",
+            "type": "string",
+            "label": "Server",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Server to run command on."
+        },
+        {
+            "name": "path",
+            "type": "string",
+            "label": "Folder",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Specifies the name of folder to set permissions on."
+        },
+        {
+            "name": "user",
+            "type": "string",
+            "label": "User",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "User to set permissions for."
+        },
+        {
+            "name": "rights",
+            "type": "string",
+            "label": "Rights",
+            "defaultValue": "Read",
+            "required": true,
+            "helpMarkDown": "Permissions like: Read,Write,Modify,FullControl. See Microsoft site for other values."
+        },
+        {
+            "name": "inheritanceFlags",
+            "type": "string",
+            "label": "Inheritance Flags",
+            "defaultValue": "ContainerInherit,ObjectInherit",
+            "required": false,
+            "helpMarkDown": "Inheritance flags specify the semantics of inheritance for access control entries (ACEs). Values: ContainerInherit,ObjectInherit and None."
+        },
+        {
+            "name": "propagationFlags",
+            "type": "pickList",
+            "label": "Propagation Flags",
+            "defaultValue": "None",
+            "required": true,
+            "helpMarkDown": "Specifies how Access Control Entries (ACEs) are propagated to child objects. These flags are significant only if inheritance flags are present.",
+            "options": {
+                "InheritOnly": "InheritOnly",
+                "None": "None",
+                "NoPropagateInherit": "NoPropagateInherit"
+            }
+        },
+        {
+            "name": "accessControlType",
+            "type": "pickList",
+            "label": "Access Control Type",
+            "defaultValue": "Allow",
+            "required": true,
+            "helpMarkDown": "Specifies whether an AccessRule object is used to allow or deny access. These values are not flags, and they cannot be combined.",
+            "options": {
+                "Allow": "Allow",
+                "Deny": "Deny"
+            }
+        }
+    ],
+    "instanceNameFormat": "Set Folder Permissions",
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\setFolderPermissions.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(System.DefaultWorkingDirectory)"
+		}
+    },
+    "messages": {
+        "failed": "Set permissions failed."
+    }
+}

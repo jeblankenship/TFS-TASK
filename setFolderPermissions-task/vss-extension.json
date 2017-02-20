@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
-    "id": "websiteBindingTask",
-    "name": "Web Site Binding",
-    "version": "0.1.27",
+    "id": "setFolderPermissionsTask",
+    "name": "Set Folder Permissions",
+    "version": "0.1.2",
     "public": true,
     "publisher": "docscode",
     "targets": [
@@ -10,23 +10,22 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Task adds or removes binding on web site on remote computer.",
+    "description": "Task sets permission on specified folder on remote computer.",
     "categories": [
         "Build and release"
     ],
     "tags": [
         "release",
         "build",
-        "IIS",
-        "bindings",
-		"website"
+        "folder",
+        "permissions"
     ],
     "links": {
         "learn": {
-            "uri": "https://github.com/jeblankenship/TFS-TASK/websiteBinding-task#readme"
+            "uri": "https://github.com/jeblankenship/TFS-TASK/tree/master/setFolderPermissions-task#readme"
         },
         "support": {
-            "uri": "https://github.com/jeblankenship/TFS-TASK/issues"  
+            "uri": "https://github.com/jeblankenship/TFS-TASK/tree/master/setFolderPermissions-task/issues"  
         }
     },
     "icons": {
@@ -56,7 +55,7 @@
     ],
     "contributions": [
         {
-            "id": "websiteBindingtask",
+            "id": "setFolderPermissionsTask",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
